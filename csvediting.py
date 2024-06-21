@@ -8,10 +8,9 @@ writer = csv.writer(output_file)
 specials = ["'", "/", '"']
 
 for line in data:
-    for line in data:
-        for special in specials:
-            line = [value.replace(special, '') for value in line]
-        writer.writerow(line)
+    for special in specials:
+        line = [value.replace(special, '') for value in line]
+    writer.writerow(line)
 
 input_file.close()
 output_file.close() 
