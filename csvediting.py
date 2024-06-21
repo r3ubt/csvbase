@@ -5,11 +5,12 @@ input_file = open('russia-ukraine.csv', 'r')
 output_file = open('russia-ukraineclean.csv', 'w')
 data = csv.reader(input_file)
 writer = csv.writer(output_file)
-specials = '"'
+specials = ["'", "/"]
 
 for line in data:
     for line in data:
-        line = [value.replace(specials, '') for value in line]
+        for special in specials:
+            line = [value.replace(special, '') for value in line]
         writer.writerow(line)
 
 input_file.close()
