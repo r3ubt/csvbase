@@ -5,7 +5,7 @@ input_file = open('russia-ukraine.csv', 'r')
 output_file = open('russia-ukraineclean.csv', 'w')
 data = csv.reader(input_file)
 writer = csv.writer(output_file)
-specials = '/'
+specials = "'"
 
 for line in data:
     for line in data:
